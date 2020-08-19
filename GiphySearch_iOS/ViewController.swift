@@ -8,12 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITextFieldDelegate {
     
-    
+    // TableView 및 searchBar 프로퍼티 선언.
     @IBOutlet var gifTableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
+    // 앱사이클
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,19 +24,49 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // 델리게이트 패턴을 함수로 이용하여 코드 구현
     func setup() {
-        
         gifTableView.dataSource = self
         gifTableView.delegate = self
+        
+        // searchBar 델리게이트 패턴 구현
+        searchBar.searchTextField.delegate = self
+        searchBar.searchTextField.placeholder = "가장 좋아하는 이미지는 무엇입니까?"
+        searchBar.returnKeyType = .search
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-
 
 }
 
+// 테이블뷰에 관한 메소드 구현. 문서 참조.
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 200
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gifCell") as! GifCell
+        
+        return cell
+        
+    }
+}
+
+extension ViewController: UISearchTextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        if textField.text != nil {
+            
+            print(textField.text!)
+        }
+        return true
+    }
+}
