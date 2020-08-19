@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8575BB224ED6A2D00B3D05A /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8575BB124ED6A2D00B3D05A /* GifCell.swift */; };
 		C8F0EE7224EBAC4600684071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0EE7124EBAC4600684071 /* AppDelegate.swift */; };
 		C8F0EE7424EBAC4600684071 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0EE7324EBAC4600684071 /* SceneDelegate.swift */; };
 		C8F0EE7624EBAC4600684071 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0EE7524EBAC4600684071 /* ViewController.swift */; };
@@ -14,9 +15,11 @@
 		C8F0EE7C24EBAC4600684071 /* GiphySearch_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8F0EE7A24EBAC4600684071 /* GiphySearch_iOS.xcdatamodeld */; };
 		C8F0EE7E24EBAC4A00684071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8F0EE7D24EBAC4A00684071 /* Assets.xcassets */; };
 		C8F0EE8124EBAC4A00684071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8F0EE7F24EBAC4A00684071 /* LaunchScreen.storyboard */; };
+		C8F0EE8924EBAC9800684071 /* GifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0EE8824EBAC9800684071 /* GifExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8575BB124ED6A2D00B3D05A /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		C8F0EE6E24EBAC4600684071 /* GiphySearch_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphySearch_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F0EE7124EBAC4600684071 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8F0EE7324EBAC4600684071 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		C8F0EE7D24EBAC4A00684071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8F0EE8024EBAC4A00684071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8F0EE8224EBAC4A00684071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8F0EE8824EBAC9800684071 /* GifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifExtension.swift; path = assets/GifExtension.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				C8F0EE7024EBAC4600684071 /* GiphySearch_iOS */,
-				C8F0EE6F24EBAC4600684071 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +56,7 @@
 				C8F0EE6E24EBAC4600684071 /* GiphySearch_iOS.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C8F0EE7024EBAC4600684071 /* GiphySearch_iOS */ = {
@@ -61,11 +65,14 @@
 				C8F0EE7124EBAC4600684071 /* AppDelegate.swift */,
 				C8F0EE7324EBAC4600684071 /* SceneDelegate.swift */,
 				C8F0EE7524EBAC4600684071 /* ViewController.swift */,
+				C8575BB124ED6A2D00B3D05A /* GifCell.swift */,
+				C8F0EE8824EBAC9800684071 /* GifExtension.swift */,
 				C8F0EE7724EBAC4600684071 /* Main.storyboard */,
 				C8F0EE7D24EBAC4A00684071 /* Assets.xcassets */,
 				C8F0EE7F24EBAC4A00684071 /* LaunchScreen.storyboard */,
 				C8F0EE8224EBAC4A00684071 /* Info.plist */,
 				C8F0EE7A24EBAC4600684071 /* GiphySearch_iOS.xcdatamodeld */,
+				C8F0EE6F24EBAC4600684071 /* Products */,
 			);
 			path = GiphySearch_iOS;
 			sourceTree = "<group>";
@@ -143,8 +150,10 @@
 			files = (
 				C8F0EE7624EBAC4600684071 /* ViewController.swift in Sources */,
 				C8F0EE7C24EBAC4600684071 /* GiphySearch_iOS.xcdatamodeld in Sources */,
+				C8575BB224ED6A2D00B3D05A /* GifCell.swift in Sources */,
 				C8F0EE7224EBAC4600684071 /* AppDelegate.swift in Sources */,
 				C8F0EE7424EBAC4600684071 /* SceneDelegate.swift in Sources */,
+				C8F0EE8924EBAC9800684071 /* GifExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junhyuk.GiphySearch-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junhyuk.GiphySearch-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
