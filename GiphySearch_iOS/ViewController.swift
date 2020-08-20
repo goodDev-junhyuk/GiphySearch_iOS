@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    var network = GifNetwork()
+    
     // TableView 및 searchBar 프로퍼티 선언.
     @IBOutlet var gifTableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
@@ -31,6 +33,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         searchBar.searchTextField.delegate = self
         searchBar.searchTextField.placeholder = "가장 좋아하는 이미지는 무엇입니까?"
         searchBar.returnKeyType = .search
+    }
+    
+    func searchGifs(for searchText: String) {
+        
+        network.fetchGifs(searchTerm: searchText)
     }
 
 }
@@ -65,7 +72,8 @@ extension ViewController: UISearchTextFieldDelegate {
         
         if textField.text != nil {
             
-            print(textField.text!)
+            searchGifs(for: textField.text!)
+            // print(textField.text!)
         }
         return true
     }
