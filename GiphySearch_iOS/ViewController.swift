@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     var network = GifNetwork()
+    var gifs = [Gif]()
     
     // TableView 및 searchBar 프로퍼티 선언.
     @IBOutlet var gifTableView: UITableView!
@@ -37,9 +38,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func searchGifs(for searchText: String) {
         
-        network.fetchGifs(searchTerm: searchText)
+        network.fetchGifs(searchTerm: searchText) { gifArray in
+            
+            if gifArray != nil {
+                print(gifArray!.gifs.count)
+                self.gifs = gifArray!.gifs
+                self.gifTableView.reloadData()
+                
+            }
+        }
     }
-
 }
 
 // 테이블뷰에 관한 메소드 구현. 문서 참조.

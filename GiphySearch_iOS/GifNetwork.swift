@@ -13,7 +13,7 @@ class GifNetwork {
     // API키 설정.
     let apiKey = "8xX150rNY4eNF4dOqTe00XaYKxEVPyoR"
     
-    func fetchGifs(searchTerm: String) {
+    func fetchGifs(searchTerm: String, completion: @escaping (_ response: GifArray?) -> Void) {
         
         let url = URL(string: "https://api.giphy.com/v1/gifs/search?api_key=\(apiKey)&q=\(searchTerm)")!
         
@@ -24,7 +24,14 @@ class GifNetwork {
                 
                 print("Error fetching from Giphy: ", err.localizedDescription)
             }
-            print("Giphy Data: ", data as Any)
+            do {
+                // 데이터를 Gif배열로 디코딩
+                DispatchQueue.main.sync {
+                    let object = try! JSONDecoder().decode(GifArray.self, from: data!)
+                    completion(object)
+                }
+            }
+            // print("Giphy Data: ", data as Any)
         }.resume()
     }
 }

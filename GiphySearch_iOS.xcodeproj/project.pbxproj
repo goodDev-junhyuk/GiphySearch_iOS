@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84DE96624F1647700E1A99C /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84DE96524F1647700E1A99C /* Gif.swift */; };
 		C8575BB224ED6A2D00B3D05A /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8575BB124ED6A2D00B3D05A /* GifCell.swift */; };
 		C8CF7A8224EEBF44004F5D8A /* GifNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF7A8124EEBF44004F5D8A /* GifNetwork.swift */; };
 		C8F0EE7224EBAC4600684071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0EE7124EBAC4600684071 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C84DE96524F1647700E1A99C /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		C8575BB124ED6A2D00B3D05A /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		C8CF7A8124EEBF44004F5D8A /* GifNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifNetwork.swift; sourceTree = "<group>"; };
 		C8F0EE6E24EBAC4600684071 /* GiphySearch_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphySearch_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 				C8F0EE7524EBAC4600684071 /* ViewController.swift */,
 				C8CF7A8124EEBF44004F5D8A /* GifNetwork.swift */,
 				C8575BB124ED6A2D00B3D05A /* GifCell.swift */,
+				C84DE96524F1647700E1A99C /* Gif.swift */,
 				C8F0EE8824EBAC9800684071 /* GifExtension.swift */,
 				C8CF7A8024EEBD96004F5D8A /* Views */,
 				C8F0EE8224EBAC4A00684071 /* Info.plist */,
@@ -161,6 +164,7 @@
 			files = (
 				C8F0EE7624EBAC4600684071 /* ViewController.swift in Sources */,
 				C8F0EE7C24EBAC4600684071 /* GiphySearch_iOS.xcdatamodeld in Sources */,
+				C84DE96624F1647700E1A99C /* Gif.swift in Sources */,
 				C8CF7A8224EEBF44004F5D8A /* GifNetwork.swift in Sources */,
 				C8575BB224ED6A2D00B3D05A /* GifCell.swift in Sources */,
 				C8F0EE7224EBAC4600684071 /* AppDelegate.swift in Sources */,
