@@ -34,6 +34,7 @@ struct Gif: Decodable {
     }
 }
 
+// 원본 이미지 데이터 저장.
 struct GifImages: Decodable {
     
     var original: original
@@ -42,6 +43,7 @@ struct GifImages: Decodable {
     }
 }
 
+// gif 데이터 URL
 struct original: Decodable {
     var url: String
 }
