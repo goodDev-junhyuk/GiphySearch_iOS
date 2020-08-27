@@ -11,7 +11,7 @@ import UIKit
 class GifNetwork {
     
     // API키 설정.
-    let apiKey = "8xX150rNY4eNF4dOqTe00XaYKxEVPyoR"
+    let apiKey = "lGcuvpd8IkpX2SSTe71wTiijV1JChLNT"
     
     func fetchGifs(searchTerm: String, completion: @escaping (_ response: GifArray?) -> Void) {
         // GET URL요청
